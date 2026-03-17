@@ -1,18 +1,56 @@
-# React + Vite
+# 🍕 Pizza Store Full-Stack Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A distributed full-stack system for managing pizza orders, featuring a **Spring Boot** microservices backend and a **React** frontend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📝 Project Overview
+This project simulates a real-world pizza ordering platform. It is built using a **Microservices Architecture**, which allows different parts of the application (like Authentication and User Management) to run independently. All communication between the frontend and backend is managed through a centralized API Gateway.
 
-## React Compiler
+### Core Technologies
+* **Frontend:** React.js (Vite), Axios, CSS3
+* **Backend:** Java 17, Spring Boot, Spring Data JPA
+* **Microservices Infrastructure:** Netflix Eureka (Service Registry), Spring Cloud Gateway
+* **Security:** JWT (JSON Web Tokens) for secure API access
+* **Database:** MySQL
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## 🚀 How to Run the Project
 
-## Expanding the ESLint configuration
+To run this project locally, follow these steps in order:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Prerequisites
+* **Java JDK 17** or higher
+* **Node.js** (v18 or higher)
+* **Maven** (to build the Java projects)
+* **MySQL Server** running on your local machine
+
+### 2. Start the Backend (Order Matters!)
+Open a terminal for each of these folders inside `pizzaStore-backend` and run the command:
+
+1.  **eureka-server:** `mvn spring-boot:run` (Wait for this to start first)
+2.  **authentication:** `mvn spring-boot:run`
+3.  **API-Gateway:** `mvn spring-boot:run`
+4.  **UserService:** `mvn spring-boot:run`
+5.  **AdminService** `mvn spring-boot:run`
+
+### 3. Start the Frontend
+1.  Navigate to the `pizzaStore-frontend` directory.
+2.  Install the required packages:
+    ```bash
+    npm install
+    ```
+3.  Start the application:
+    ```bash
+    npm run dev
+    ```
+4.  Open your browser to the URL shown in the terminal (usually `http://localhost:5173`).
+
+---
+
+## 🛠️ Key Technical Features
+* **Microservices Communication:** Uses Eureka for service discovery.
+* **Centralized Security:** JWT-based authentication implemented at the gateway/service level.
+* **Global Error Handling:** Custom `GlobalExceptionHandler` to ensure the API always returns readable error messages.
+* **Responsive UI:** A React-based frontend designed for a smooth user experience.
