@@ -1,0 +1,14 @@
+package com.pizzastore.userservice.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.pizzastore.userservice.entity.Cart;
+
+@Repository
+public interface CartRepository extends JpaRepository<Cart, Integer>{
+	// Fetch all cart items for a specific user
+    List<Cart> findByUserId(int userId);
+}

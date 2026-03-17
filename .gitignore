@@ -1,0 +1,14 @@
+# React
+**/node_modules/
+**/build/
+
+# Spring Boot
+**/target/
+**/.mvn/
+**/bin/
+
+# IDE files
+.metadata/
+.settings/
+.project
+.classpath

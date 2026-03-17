@@ -1,0 +1,270 @@
+/* OrdersPage.css */
+
+.orders-page {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding: 30px 0;
+}
+
+.orders-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1a1a2e;
+}
+
+/* Empty Orders */
+.empty-orders {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.empty-orders i {
+    font-size: 5rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.empty-orders h4 {
+    font-weight: 700;
+    color: #2d2d2d;
+    margin-bottom: 10px;
+}
+
+.empty-orders p {
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+/* Order Card */
+.order-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.order-card-header {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.order-card-header .order-id {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.order-card-header .order-date {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.order-card-body {
+    padding: 20px;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.status-PENDING {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-CONFIRMED {
+    background-color: #cff4fc;
+    color: #055160;
+}
+
+.status-PREPARING {
+    background-color: #cfe2ff;
+    color: #084298;
+}
+
+.status-DELIVERED {
+    background-color: #d1e7dd;
+    color: #0a3622;
+}
+
+.status-CANCELLED {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+/* Order Items */
+.order-items-table {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.order-items-table th {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #6c757d;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.order-items-table td {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    color: #2d2d2d;
+    border-bottom: 1px solid #f8f8f8;
+    vertical-align: middle;
+}
+
+.order-items-table tr:last-child td {
+    border-bottom: none;
+}
+
+.item-name-cell {
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+/* Order Footer */
+.order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 2px solid #f1f1f1;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.order-meta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.order-meta-item {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.order-meta-item i {
+    color: #e63946;
+    margin-right: 5px;
+}
+
+.order-meta-item span {
+    font-weight: 600;
+    color: #2d2d2d;
+}
+
+.order-total {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #e63946;
+}
+
+.cancel-btn {
+    background-color: transparent;
+    border: 2px solid #dc3545;
+    border-radius: 8px;
+    padding: 7px 18px;
+    color: #dc3545;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cancel-btn:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Status Timeline */
+.status-timeline {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 70px;
+    position: relative;
+}
+
+.timeline-step::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -50%;
+    width: 100%;
+    height: 2px;
+    background-color: #e0e0e0;
+    z-index: 0;
+}
+
+.timeline-step:first-child::before {
+    display: none;
+}
+
+.timeline-dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    color: white;
+    z-index: 1;
+    position: relative;
+}
+
+.timeline-dot.active {
+    background-color: #e63946;
+}
+
+.timeline-dot.completed {
+    background-color: #28a745;
+}
+
+.timeline-label {
+    font-size: 0.7rem;
+    color: #aaa;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.timeline-label.active {
+    color: #e63946;
+}
+
+.timeline-label.completed {
+    color: #28a745;
+}

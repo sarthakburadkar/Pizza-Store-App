@@ -1,0 +1,83 @@
+/* AdminDashboard.css */
+
+.admin-dashboard-page {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.admin-dashboard-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 5px;
+}
+
+.admin-dashboard-header p {
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+/* Navigation Cards */
+.admin-nav-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    height: 100%;
+}
+
+.admin-nav-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    border-color: #e63946;
+}
+
+.admin-nav-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.admin-nav-card-icon.red { background-color: #fff0f0; color: #e63946; }
+.admin-nav-card-icon.blue { background-color: #f0f4ff; color: #4361ee; }
+.admin-nav-card-icon.green { background-color: #f0fff4; color: #2d6a4f; }
+
+.admin-nav-card h5 {
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.admin-nav-card p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.admin-nav-card-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #1a1a2e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    pointer-events: none;
+}
+
+.admin-nav-card:hover .admin-nav-card-btn {
+    background-color: #e63946;
+}

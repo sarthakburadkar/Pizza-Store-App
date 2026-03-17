@@ -1,0 +1,280 @@
+/* AdminOrdersPage.css */
+
+.admin-orders-page {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    padding: 30px 0;
+}
+
+/* Filter Tabs */
+.filter-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.filter-tab {
+    padding: 8px 18px;
+    border-radius: 25px;
+    border: 2px solid #e0e0e0;
+    background: white;
+    color: #6c757d;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-tab:hover {
+    border-color: #1a1a2e;
+    color: #1a1a2e;
+}
+
+.filter-tab.active {
+    background-color: #1a1a2e;
+    border-color: #1a1a2e;
+    color: white;
+}
+
+.filter-tab.active-PENDING { background-color: #856404; border-color: #856404; color: white; }
+.filter-tab.active-CONFIRMED { background-color: #055160; border-color: #055160; color: white; }
+.filter-tab.active-PREPARING { background-color: #084298; border-color: #084298; color: white; }
+.filter-tab.active-DELIVERED { background-color: #0a3622; border-color: #0a3622; color: white; }
+.filter-tab.active-CANCELLED { background-color: #842029; border-color: #842029; color: white; }
+
+/* Order Card */
+.admin-order-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.admin-order-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.admin-order-header {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.admin-order-header .order-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.admin-order-header .order-id {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.admin-order-header .order-meta {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    display: flex;
+    gap: 15px;
+}
+
+.admin-order-body {
+    padding: 20px;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.status-PENDING { background-color: #fff3cd; color: #856404; }
+.status-CONFIRMED { background-color: #cff4fc; color: #055160; }
+.status-PREPARING { background-color: #cfe2ff; color: #084298; }
+.status-DELIVERED { background-color: #d1e7dd; color: #0a3622; }
+.status-CANCELLED { background-color: #f8d7da; color: #842029; }
+
+/* Order Items Table */
+.admin-order-table {
+    width: 100%;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+}
+
+.admin-order-table th {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #6c757d;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.admin-order-table td {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    color: #2d2d2d;
+    border-bottom: 1px solid #f8f8f8;
+    vertical-align: middle;
+}
+
+.admin-order-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Order Footer */
+.admin-order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 2px solid #f1f1f1;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.admin-order-meta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.admin-order-meta-item {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.admin-order-meta-item i {
+    color: #e63946;
+    margin-right: 5px;
+}
+
+.admin-order-meta-item span {
+    font-weight: 600;
+    color: #2d2d2d;
+}
+
+.admin-order-total {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #e63946;
+}
+
+/* Action Buttons */
+.advance-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #1a1a2e;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.advance-btn:hover {
+    background-color: #e63946;
+    transform: translateY(-1px);
+}
+
+.bill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #d1e7dd;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    color: #0a3622;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.bill-btn:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Bill Modal */
+.bill-modal-header {
+    background-color: #1a1a2e;
+    color: white;
+    border-radius: 15px 15px 0 0;
+}
+
+.bill-modal-header .btn-close {
+    filter: invert(1);
+}
+
+.bill-info p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.bill-info p strong {
+    color: #1a1a2e;
+}
+
+.bill-total-box {
+    background-color: #fff5f5;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: right;
+}
+
+.bill-total-box h5 {
+    color: #e63946;
+    font-weight: 800;
+    margin: 0;
+}
+
+.print-btn {
+    background-color: #1a1a2e;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.print-btn:hover {
+    background-color: #e63946;
+}
+
+/* Empty State */
+.admin-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6c757d;
+}
+
+.admin-empty i {
+    font-size: 4rem;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+    display: block;
+}
